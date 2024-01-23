@@ -1,51 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <h1 id="heading">Student Search IITK</h1>
+   
+    <div class="tabs">
+        
+        <select class="options" name="batch">
+            <option value="" disabled selected hidden> Batch</option>
+            <option value="Y10">Y10</option>
+            <option value="Y11">Y11</option>
+            <option value="Y12">Y12</option>
+            <option value="Y13">Y13</option>
+            <option value="Y14">Y14</option>
+            <option value="Y15">Y15</option>
+            <option value="Y20">Y20</option>
+            <option value="Y21">Y21</option>
+            <option value="Y22">Y22</option>
+            <option value="Y23">Y23</option>
+        </select>
 
-const database = [
-    { name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
-{ name: "John Parker", batch: "Y10", gender: "Male", hall: "Hall 2", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+"}
-  ];
-  
-  function search() {
-    
-    const selectedBatch = document.querySelector('select[name="batch"]').value;
-    const selectedGender = document.querySelector('select[name="gender"]').value;
-    const selectedHall = document.querySelector('select[name="hall"]').value;
-    const selectedProgramme = document.querySelector('select[name="programme"]').value;
-    const selectedDepartment = document.querySelector('select[name="department"]').value;
-    const selectedBloodGroup = document.querySelector('select[name="bloodGroup"]').value;
-    const inputHometown = document.getElementById('inputHometown').value.toLowerCase();
-    const inputSearch = document.getElementById('inputSearch').value.toLowerCase();
-  
-    
-    const filteredResults = database.filter(student => (
-      (selectedBatch === "" || student.batch === selectedBatch) &&
-      (selectedGender === "" || student.gender === selectedGender) &&
-      (selectedHall === "" || student.hall === selectedHall) &&
-      (selectedProgramme === "" || student.programme === selectedProgramme) &&
-      (selectedDepartment === "" || student.department === selectedDepartment) &&
-      (selectedBloodGroup === "" || student.bloodGroup === selectedBloodGroup) &&
-      (inputHometown === "" || student.hometown.toLowerCase().includes(inputHometown)) &&
-      (inputSearch === "" || student.name.toLowerCase().includes(inputSearch) || student.username.toLowerCase().includes(inputSearch) || student.rollNo.toLowerCase().includes(inputSearch))
-    ));
-  
-    // Display the results on the website
-    const resultsContainer = document.getElementById('resultsContainer');
-    resultsContainer.innerHTML = ""; // Clear previous results
-  
-    filteredResults.forEach(student => {
-      const resultDiv = document.createElement('div');
-      resultDiv.innerHTML = `
-        <p><strong>Name:</strong> ${student.name}</p>
-        <p><strong>Roll No:</strong> ${student.rollno}</p>
-        <p><strong>Batch:</strong> ${student.batch}</p>
-        <p><strong>Gender:</strong> ${student.gender}</p>
-        <p><strong>Hall:</strong> ${student.hall}</p>
-        <p><strong>Programme:</strong> ${student.programme}</p>
-        <p><strong>Department:</strong> ${student.department}</p>
-        <p><strong>Blood Group:</strong> ${student.bloodGroup}</p>
-        <p><strong>Hometown:</strong> ${student.hometown}</p>
-        <hr>
-      `;
-      resultsContainer.appendChild(resultDiv);
-    });
-  }
-  
+        <select class="options" name="gender">
+            <option value="" disabled selected hidden>Gender</option>
+            <option value="Any">Any</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        
+        <select class="options" name="hall">
+            <option value="" disabled selected hidden>Hall</option>
+            <option value="Hall 1">Hall 1</option>
+            <option value="Hall 2">Hall 2</option>
+            <option value="Hall 3" >Hall 3</option>
+            <option value="Hall 4">Hall 4</option>
+            <option value="Hall 5">Hall 5</option>
+            <option value="Hall 6" >Hall 6</option>
+            <option value="Hall 7">Hall 7</option>
+            <option value="Hall 8">Hall 8</option>
+            <option value="Hall 9">Hall 9</option>
+            <option value="Hall 10" >Hall 10</option>
+            <option value="Hall 11">Hall 11</option>
+            <option value="Hall 12">Hall 12</option>
+            <option value="Hall 13">Hall 13</option>
+        </select>
+        <br>
+        
+        <select class="options2" name="programme">
+            <option value="" disabled selected hidden>Programme</option>
+            <option value="BS">BS</option>
+            <option value="BTech">BTech</option>
+            <option value="BS-MBA">BS-MBA</option>
+            <option value="Mtech">MTech</option>
+            <option value="MS">MS</option>
+            <option value="PHD">PHD</option>
+            <option value="BT-MS">BT-MS</option>
+            <option value="BS-MT">BS-MT</option>
+            <option value="MBA">MBA</option>
+            <option value="MDes">MDes</option>
+          
+           
+        </select>
+
+        <select class="options2" name="department">
+            <option value="" disabled selected hidden>Department</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <option value="Biological Sciences and Bioengineering">Biological Sciences and Bioengineering</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Earth Science">Earth Science</option>
+            <option value="Economics">Economics</option>
+            <option value="Material Science and Engineering">Material Science and Engineering</option>
+            <option value="Mathematics and Scientific Compting">Mathematics and Scientific Compting</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Statistics and Data Science">Statistics and Data Science</option>
+        </select>
+
+        <select class="options2" name="bloodGroup">
+            <option value="" disabled selected hidden>Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="A-">A-</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="Not Available">Not Available</option>
+          
+        </select>
+        <br>
+        
+        <input type="text" id="inputHometown" placeholder="Hometown">
+        <br>
+        
+        <input type="text" id="inputSearch" placeholder="Enter Name, Username, or Roll No">
+        
+        <button onclick="search()">Search</button>
+    </div>
+    <div id="resultsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
