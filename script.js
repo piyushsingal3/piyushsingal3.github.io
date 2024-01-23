@@ -1,11 +1,31 @@
-// Sample static database
+
 const database = [
-    { name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
-{ name: "John Parker", batch: "Y10", gender: "Male", hall: "Hall 2", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+"}
-  ];
+    { name: "Piyush Singal", batch: "Y23", gender: "Male", hall: "Hall 13", programme: "BTech", department: "Material Science and Engineering", bloodGroup: "AB+" ,rollno:230755,hometown:"Hisar"},
+{ name: "Yuvraj Singh", batch: "Y23", gender: "Male", hall: "Hall 13", programme: "BS", department: "Earth Science", bloodGroup: "A+",rollno:231206},
+{ name: "Pradyumna Deshmukh", batch: "Y23", gender: "Male", hall: "Hall 13", programme: "BTech", department: "Mechanical Engineering", bloodGroup: "0+" ,rollno:230566,hometown:"Aurangabad,Maharashtra"},
+{ name: "Arnav Jagtap", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+{ name: "John Doe", batch: "Y10", gender: "Male", hall: "Hall 1", programme: "BS", department: "Aerospace Engineering", bloodGroup: "A+" ,rollno:239},
+
+];
   
   function search() {
-    // Get selected values
+    
     const selectedBatch = document.querySelector('select[name="batch"]').value;
     const selectedGender = document.querySelector('select[name="gender"]').value;
     const selectedHall = document.querySelector('select[name="hall"]').value;
@@ -15,7 +35,7 @@ const database = [
     const inputHometown = document.getElementById('inputHometown').value.toLowerCase();
     const inputSearch = document.getElementById('inputSearch').value.toLowerCase();
   
-    // Perform filtering based on selected values
+    
     const filteredResults = database.filter(student => (
       (selectedBatch === "" || student.batch === selectedBatch) &&
       (selectedGender === "" || student.gender === selectedGender) &&
@@ -27,9 +47,9 @@ const database = [
       (inputSearch === "" || student.name.toLowerCase().includes(inputSearch) || student.username.toLowerCase().includes(inputSearch) || student.rollNo.toLowerCase().includes(inputSearch))
     ));
   
-    // Display the results on the website
+    
     const resultsContainer = document.getElementById('resultsContainer');
-    resultsContainer.innerHTML = ""; // Clear previous results
+    resultsContainer.innerHTML = ""; 
   
     filteredResults.forEach(student => {
       const resultDiv = document.createElement('div');
