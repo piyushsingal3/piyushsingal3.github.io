@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <h1 id="heading">Student Search IITK</h1>
+   
+    <div class="tabs">
+        
+        <select class="options" name="batch">
+            <!-- Add unique values for each option -->
+            <option value="" disabled selected hidden>Batch</option>
+            <option value="Y10">Y10</option>
+            <option value="Y11">Y11</option>
+            <!-- Add other batch options -->
+        </select>
+
+        <select class="options" name="gender">
+            <option value="" disabled selected hidden>Gender</option>
+            <option value="Any">Any</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        
+        <select class="options" name="hall">
+            <option value="" disabled selected hidden>Hall</option>
+            <option value="Hall 1">Hall 1</option>
+            <option value="Hall 2">Hall 2</option>
+            <!-- Add other hall options -->
+        </select>
+        <br>
+        
+        <select class="options2" name="programme">
+            <option value="" disabled selected hidden>Programme</option>
+            <option value="BS">BS</option>
+            <!-- Add other programme options -->
+        </select>
+
+        <select class="options2" name="department">
+            <option value="" disabled selected hidden>Department</option>
+            <option value="Aerospace Engineering">Aerospace Engineering</option>
+            <!-- Add other department options -->
+        </select>
+
+        <select class="options2" name="bloodGroup">
+            <option value="" disabled selected hidden>Blood Group</option>
+            <option value="A+">A+</option>
+            <!-- Add other blood group options -->
+        </select>
+        <br>
+        
+        <input type="text" id="inputHometown" placeholder="Hometown">
+        <br>
+        
+        <input type="text" id="inputSearch" placeholder="Enter Name, Username, or Roll No">
+        
+        <button onclick="search()">Search</button>
+    </div>
+    <div id="resultsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

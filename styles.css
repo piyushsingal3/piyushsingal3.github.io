@@ -1,0 +1,116 @@
+*{
+    background-color:black;
+      
+    COLOR:WHITE;
+    
+    text-align:center;
+}
+
+#heading{
+    font-size:60px;
+    font-family:georgia;
+    
+}
+.options{
+    border:2px solid rgb(212, 201, 201);
+    font-size:20px;
+    text-align:center;
+    margin-top:70px;
+    margin-left:50px;
+    border-radius:10%;
+    block-size: 90;
+    text-align:left;
+    
+    
+    justify-content: center;
+    align-items: center;
+  
+    color :white;
+    background-color:black;
+    width:250px;
+   text-align:left;
+   height:50px;
+   border-radius:10px;
+}
+.options2{
+    border:1px solid rgb(212, 201, 201);
+    font-size:20px;
+    text-align:center;
+    margin-top:50px;
+    margin-left:50px;
+    border-radius:10px;
+   width:250px;
+   text-align:left;
+   height:50px;
+   margin-top:70px;
+   margin-left:50px;
+    
+    
+    justify-content: center;
+    align-items: center;
+  
+    color :white;
+    background-color:black;
+}
+
+.tabs{
+    height:475px;
+    margin-left:150px;
+    margin-right:150px;
+    background-color:rgb(43, 42, 42);
+   
+}
+#inputHometown{
+ 
+    
+    
+    color :white;
+    background-color:rgb(25, 24, 24);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    
+    font-size:20px;
+    line-height:2em;
+    letter-spacing: 0.00938em;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    cursor: text;
+   
+    display: inline-flex;
+   
+    border-radius: 4px;
+    height:50px;
+    width:250px;
+    margin-top:70px;
+    margin-left:50px;
+     
+}
+#resultsContainer{
+    display:flex;
+    border:2px solid white;
+    gap: 3px;
+}
+
+#inputSearch{
+    
+    color :white;
+    background-color:rgb(25, 24, 24);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    
+    font-size:20px;
+    line-height:2em;
+    letter-spacing: 0.00938em;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    cursor: text;
+   
+    display: inline-flex;
+   
+    border-radius: 4px;
+    height:50px;
+    width:1000px;
+    margin-top:40px;
+    margin-left:50px;
+     
+}
