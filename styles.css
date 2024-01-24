@@ -65,10 +65,10 @@ button{
     
     color :white;
     background-color:rgb(25, 24, 24);
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-family: "Roboto";
     font-size:20px;
     line-height:2em;
-    letter-spacing: 0.00938em;
+    letter-spacing: 0.0094em;
     color: #fff;
     box-sizing: border-box;
     position: relative;
@@ -81,7 +81,7 @@ button{
     margin-left:50px;
      
 }
-#resultsContainer{
+#result{
     
     border:2px solid white;
     gap: 10px;
