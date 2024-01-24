@@ -14,12 +14,17 @@
         
         <select class="options" name="batch">
             <option value="" disabled selected hidden> Batch</option>
+            <option value="">Any</option>
             <option value="Y10">Y10</option>
             <option value="Y11">Y11</option>
             <option value="Y12">Y12</option>
             <option value="Y13">Y13</option>
             <option value="Y14">Y14</option>
             <option value="Y15">Y15</option>
+            <option value="Y16">Y16</option>
+            <option value="Y17">Y17</option>
+            <option value="Y18">Y18</option>
+            <option value="Y19">Y19</option>
             <option value="Y20">Y20</option>
             <option value="Y21">Y21</option>
             <option value="Y22">Y22</option>
@@ -28,6 +33,7 @@
 
         <select class="options" name="gender">
             <option value="" disabled selected hidden>Gender</option>
+          
             <option value="Any">Any</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -35,6 +41,7 @@
         
         <select class="options" name="hall">
             <option value="" disabled selected hidden>Hall</option>
+            <option value="">Any</option>
             <option value="Hall 1">Hall 1</option>
             <option value="Hall 2">Hall 2</option>
             <option value="Hall 3" >Hall 3</option>
@@ -53,6 +60,7 @@
         
         <select class="options2" name="programme">
             <option value="" disabled selected hidden>Programme</option>
+            <option value="">Any</option>
             <option value="BS">BS</option>
             <option value="BTech">BTech</option>
             <option value="BS-MBA">BS-MBA</option>
@@ -69,22 +77,25 @@
 
         <select class="options2" name="department">
             <option value="" disabled selected hidden>Department</option>
+            <option value="" >Any</option>
             <option value="Aerospace Engineering">Aerospace Engineering</option>
             <option value="Biological Sciences and Bioengineering">Biological Sciences and Bioengineering</option>
             <option value="Chemical Engineering">Chemical Engineering</option>
             <option value="Chemistry">Chemistry</option>
             <option value="Civil Engineering">Civil Engineering</option>
             <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Electrical Engineering">Computer Science and Engineering</option>
             <option value="Earth Science">Earth Science</option>
             <option value="Economics">Economics</option>
             <option value="Material Science and Engineering">Material Science and Engineering</option>
-            <option value="Mathematics and Scientific Compting">Mathematics and Scientific Compting</option>
+            <option value="Mathematics and Scientific Computing">Mathematics and Scientific Computing</option>
             <option value="Mechanical Engineering">Mechanical Engineering</option>
             <option value="Statistics and Data Science">Statistics and Data Science</option>
         </select>
 
         <select class="options2" name="bloodGroup">
             <option value="" disabled selected hidden>Blood Group</option>
+            <option value="" >Any</option>
             <option value="A+">A+</option>
             <option value="B+">B+</option>
             <option value="A-">A-</option>
@@ -105,7 +116,7 @@
         
         <button onclick="search()">Search</button>
     </div>
-    <div id="resultsContainer"></div>
+    <div id="result"></div>
 
     <script src="script.js"></script>
 </body>
